@@ -1,0 +1,38 @@
+@import "/src/styles";
+
+.device-management-grid {
+    margin: 1rem 1rem 0 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    height: 100%
+}
+
+.device-management-grid-element {
+    @include box-shadow;
+    border-radius: 8px;
+}
+
+.device-list {
+    grid-column: 1;
+}
+
+.device-list > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.device-list > ul > li {
+    border: 1px solid $second-grey;
+    padding: 0.75rem;
+
+    &:hover {
+        background-color: $second-blue;
+        cursor: pointer;
+    }
+}
+
+.device-list-title {
+    font-weight: 500;
+}

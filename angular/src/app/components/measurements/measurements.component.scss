@@ -1,0 +1,97 @@
+@import "/src/styles";
+
+.measurements-grid {
+    margin: 1rem 1rem 0 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%
+}
+
+.measurement-grid-element {
+    @include box-shadow;
+    border-radius: 8px;
+}
+
+.measurement-list {
+    grid-column: 1;
+    grid-row: span 2;
+}
+
+.measurement-list > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.measurement-list > ul > li {
+    border: 1px solid $second-grey;
+    padding: 0.75rem;
+
+    &:hover {
+        background-color: $second-blue;
+        cursor: pointer;
+    }
+}
+
+.measurement-list-title {
+    font-weight: 500;
+}
+
+.measurement-list-status,
+.measurement-list-details {
+    font-size: 0.75rem;
+    position: relative;
+}
+
+.measurement-list-status {
+    padding-left: 1rem;
+}
+
+.icon {
+    height: 0.8rem;
+    position: absolute;
+    transform: translateX(-1rem);
+}
+
+.settings {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.title {
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: 1px solid $second-grey;
+}
+
+.forms {
+    padding: 1rem;
+}
+
+.form-group {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group > input {
+    padding: 0.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 1px solid $form-grey;
+}
+
+.form-group > input.number {
+    width: 3rem;
+}
+
+.content {
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}

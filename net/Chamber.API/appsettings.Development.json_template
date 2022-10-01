@@ -1,0 +1,23 @@
+{
+  "Data": {
+    "AppConnection": {
+      "ConnectionString": "Host=localhost:5434;Database=chamber;Username=application;Password=pass"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "Urls": "http://localhost:5006;https://localhost:5005",
+  "Kestrel": {
+    "Certificates": {
+      "Path": "/app/certs/crt.pem",
+      "Default": {
+        "Password": "password"
+      }
+    }
+  }
+}

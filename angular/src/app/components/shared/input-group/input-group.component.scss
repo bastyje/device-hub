@@ -1,0 +1,76 @@
+@import "/src/styles";
+
+// label {
+//     padding-right: 1rem;
+// }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+    padding: 0.5rem;
+}
+
+input, textarea, select {
+    padding: 0.2rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px $first-grey solid;
+}
+
+input[type=number] {
+    width: 3rem;
+}
+
+input[type=checkbox] {
+    opacity: 0;
+    pointer-events: all;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ .slider {
+    transform: translateX(1rem);
+    transition-duration: 0.2s;
+}
+
+.checkbox {
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+    pointer-events: none;
+    background-color: $first-blue;
+}
+
+input[type=checkbox] ~ .slider {
+    position: absolute;
+    pointer-events: none;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #fff;
+    transition-duration: 0.2s;
+    top: 0.0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0.15rem;
+}
+
+textarea {
+    resize: none;
+    overflow: hide;
+    width: 86%;
+    height: 10rem;
+    font-family: $monospace-font;
+}
+
+select {
+    width: 50%;
+    background-color: #fff;
+}
+
+option {
+    width: inherit;
+}

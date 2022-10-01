@@ -1,0 +1,5 @@
+-- CREATE SCHEMA dbo;
+GRANT USAGE ON SCHEMA dbo TO application;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA dbo TO application;
+
+CREATE TABLE dbo."Measurement" ("Id" VARCHAR(32), "Name" VARCHAR(200));

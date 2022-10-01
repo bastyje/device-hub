@@ -1,0 +1,105 @@
+@import "/src/styles";
+
+.navbar {
+    height: 5rem;
+    border-bottom: $second-grey 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include box-shadow;
+}
+
+.main-menu {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-menu {
+    font-weight: 500;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logout {
+    margin: 0 4px 0 0;
+    padding: 6px 20px;
+    border: 1px solid $first-grey;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $second-blue;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    width: 10.5rem;
+}
+
+.logo-container {
+    height: 100%;
+
+    &:hover {
+        background-color: $hover-grey;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+ul > li {
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+}
+
+li:hover {
+    background-color: $hover-grey;
+}
+
+li > span {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+li:hover > span {
+    transform: translateY(-0.4rem);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+li > div {
+    display: block;
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.active > div {
+    background-color: $first-blue;
+}
+
+.active > span {
+    transform: translateY(-0.2rem);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+
+}

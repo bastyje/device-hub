@@ -1,0 +1,33 @@
+@import "../measurements.component.scss";
+
+.container {
+    padding: 2rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.container-element,
+.description {
+    padding: 0.5rem;
+}
+
+.container-element {
+    display: flex;
+    justify-content: space-between;
+}
+
+.errors {
+    display: flex;
+}
+
+.error-log {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    margin-left: 0.4rem;
+    text-decoration: none;
+    border: $first-grey 1px solid;
+    border-radius: 0.3rem;
+}

@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap');
+
+$main-font: 'Roboto', sans-serif;
+$monospace-font: 'Roboto Mono', monospace;
+
+$first-grey: #4d4d4d;
+$second-grey: rgb(228, 234, 236, 0.5);
+$hover-grey: rgba(243, 247, 249, 0.3);
+$form-grey: rgba(232, 232, 232, 1);
+
+$first-blue: #073ca1;
+$second-blue: rgba(128, 194, 242, 0.2);
+
+$first-red: #ea1b2f;
+
+@mixin box-shadow() {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  }
+
+* {
+    margin: 0;
+    font-family: $main-font;
+    color: $first-grey;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

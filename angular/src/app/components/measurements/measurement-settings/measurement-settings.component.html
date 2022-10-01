@@ -1,0 +1,26 @@
+<div class="container">
+  <p class="title" align="center">Settings</p>
+  <!-- <a class="expand"><img src="../../../../assets/icons/expand.svg"></a> -->
+  <div class="content">
+    <app-input-group id="name" [id]="'name'" [label]="'Name'" [type]="'text'">
+    </app-input-group>
+    <app-input-group [id]="'durationOrTimePick'" [label]="'Duration/Time pick'" [type]="'checkbox'">
+    </app-input-group>
+    <app-input-group [id]="'duration'" [label]="'Duration'" [type]="'text'">
+    </app-input-group>
+    <app-input-group [id]="'start'" [label]="'Start time'" [type]="'time'">
+    </app-input-group>
+    <app-input-group [id]="'end'" [label]="'End time'" [type]="'time'">
+    </app-input-group>
+    <app-input-group [id]="'temperature'" [label]="'Temperature'" [type]="'number'">
+    </app-input-group>
+    <app-input-group [id]="'humidity'" [label]="'Humidity'" [type]="'number'">
+    </app-input-group>
+    <app-input-group [id]="'template'" [label]="'Template'" [type]="'select'" [options]="['a', 'b', 'c']">
+    </app-input-group>
+    <app-input-group [id]="'exportType'" [label]="'Export type'" [type]="'select'" [options]="['csv', 'xls', 'none']">
+    </app-input-group>
+    <app-input-group id="script" [id]="'script'" [label]="'Script'" [type]="'textarea'">
+    </app-input-group>
+  </div>
+</div>

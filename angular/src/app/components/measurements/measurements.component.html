@@ -1,0 +1,23 @@
+<div class="measurements-grid">
+  <div class="measurement-grid-element measurement-list">
+    <ul>
+      <li *ngFor="let measurement of measurements">
+        <p class="measurement-list-title">{{measurement.name}}</p>
+        <!-- <p class="measurement-list-details">{{measurement.date}} {{measurement.user}}</p> -->
+        <p class="measurement-list-status">
+          <img class="icon" src="./assets/icons/green-checkmark-icon.svg">
+          <!-- {{measurement.status}} -->
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="measurement-grid-element details">
+    <app-measurement-details></app-measurement-details>
+  </div>
+  <div class="measurement-grid-element chart">
+    <app-measurement-charts></app-measurement-charts>
+  </div>
+  <div class="measurement-grid-element settings">
+    <app-measurement-settings></app-measurement-settings>
+  </div>
+</div>

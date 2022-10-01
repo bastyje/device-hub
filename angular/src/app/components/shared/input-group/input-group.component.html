@@ -1,0 +1,12 @@
+<div class="container">
+  <label for="{{id}}" class="input">{{label}}</label>
+  <input *ngIf="type === 'text' || type === 'number' || type === 'time'" id="{{id}}" type="{{type}}" class="input" spellcheck="false">
+  <div *ngIf="type === 'checkbox'" class="checkbox">
+    <input id="{{id}}" type="{{type}}">
+    <span class="slider"></span>
+  </div>
+  <select *ngIf="type == 'select'" id="{{id}}" class="select">
+    <option *ngFor="let option of options" value="{{option}}">{{option}}</option>
+  </select>
+  <textarea *ngIf="type === 'textarea'" id="{{id}}" class="input" spellcheck="false"></textarea>
+</div>

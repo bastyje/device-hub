@@ -1,0 +1,38 @@
+<nav class="navbar">
+    <div class="main-menu">
+        <a class="logo-container" [routerLink]="'/'">
+            <img class="logo" src="./assets/icons/devicehub.svg">
+        </a>
+        <ul>
+            <li>
+                <a>
+                    <p>{{this.username}}</p>
+                </a>
+                <img src="./assets/icons/angle.svg">
+            </li>
+            <li>
+                <a>
+                    <button class="logout">Logout</button>                    
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="sub-menu">
+        <ul>
+            <li [routerLink]="['/', 'dashboard']" [routerLinkActive]="['active']">
+                <span>Dashboard</span>
+                <div></div>
+            </li>
+            <li [routerLink]="['/', 'measurements']" routerLinkActive="active">
+                <span>Measurements</span>
+                <div></div>
+            </li>
+            <li [routerLink]="['/', 'device-management']" [routerLinkActive]="['active']">
+                <span>Device management</span>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+</nav>

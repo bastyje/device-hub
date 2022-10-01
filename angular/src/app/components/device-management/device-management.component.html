@@ -1,0 +1,12 @@
+<div class="device-management-grid">
+  <div class="device-management-grid-element device-list">
+    <ul>
+      <li *ngFor="let device of devices">
+        <p class="device-list-title">{{device.name}}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="device-management-grid-element details">
+    <app-device-management-detail></app-device-management-detail>
+  </div>
+</div>
