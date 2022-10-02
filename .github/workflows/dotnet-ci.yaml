@@ -2,6 +2,7 @@ name: .NET CI
 
 env:
   DOTNET_VERSION: '6.0.401'
+  PATH_TO_DOTNET_PROJECT: 'net/Chamber.API/Chamber.API.csproj'
 
 on:
   push:
@@ -21,8 +22,8 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore --project ${{env.PATH_TO_DOTNET_PROJECT}}
       - name: Build app
-        run: dotnet build -c Release --no-restore
+        run: dotnet build -c Release --no-restore --project ${{env.PATH_TO_DOTNET_PROJECT}}
       - name: Run automated tests
-        run: dotnet test -c Release --no-build
+        run: dotnet test -c Release --no-build --project ${{env.PATH_TO_DOTNET_PROJECT}}
