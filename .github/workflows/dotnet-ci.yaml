@@ -22,7 +22,7 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
       - name: Restore dependencies
-        run: dotnet restore --project ${{env.PATH_TO_DOTNET_PROJECT}}
+        run: dotnet restore
       - name: Build app
         run: dotnet build -c Release --no-restore --project ${{env.PATH_TO_DOTNET_PROJECT}}
       - name: Run automated tests
