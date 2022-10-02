@@ -1,0 +1,26 @@
+name: Angular CI
+
+env:
+  NODE_VERSION: '16.17.1'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+jobs:
+  build:
+    name: Build Angular
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - name: Install dependencies
+        run: npm install
+      - name: Build app
+        run: cd angular && npm run build
