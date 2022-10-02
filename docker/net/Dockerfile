@@ -17,4 +17,4 @@ COPY --from=publish /app/out .
 RUN mkdir certs
 COPY --from=build /app/certs ./certs
 # ENTRYPOINT ["sleep", "10000"]
-ENTRYPOINT ["dotnet", "Chamber.API.dll"]
+ENTRYPOINT ["dotnet", "DeviceHub.API.dll"]

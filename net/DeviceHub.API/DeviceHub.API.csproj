@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chamber.Application\Chamber.Application.csproj" />
-    <ProjectReference Include="..\Chamber.Infrastructure\Chamber.Infrastructure.csproj" />
-    <ProjectReference Include="..\Chamber.Persistence\Chamber.Persistence.csproj" />
+    <ProjectReference Include="..\DeviceHub.Application\DeviceHub.Application.csproj" />
+    <ProjectReference Include="..\DeviceHub.Infrastructure\DeviceHub.Infrastructure.csproj" />
+    <ProjectReference Include="..\DeviceHub.Persistence\DeviceHub.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

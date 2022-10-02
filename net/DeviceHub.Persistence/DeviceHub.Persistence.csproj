@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Chamber.Application\Chamber.Application.csproj" />
-    <ProjectReference Include="..\Chamber.Domain\Chamber.Domain.csproj" />
+    <ProjectReference Include="..\DeviceHub.Application\DeviceHub.Application.csproj" />
+    <ProjectReference Include="..\DeviceHub.Domain\DeviceHub.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
