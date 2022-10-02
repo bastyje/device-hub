@@ -2,7 +2,7 @@ name: .NET CI
 
 env:
   DOTNET_VERSION: '6.0.401'
-  PATH_TO_API_PROJECT: 'net/Chamber.API/Chamber.API.csproj'
+  PATH_TO_API_PROJECT: 'net/DeviceHub.API/DeviceHub.API.csproj'
   PATH_TO_SLN_FILE: 'net'
 
 on:
