@@ -5,7 +5,7 @@ env:
   POSTGRES_USER: application
   POSTGRES_PASSWORD: password
   DATABASE_PATH: database
-  THIS_PATH: '.github'
+  THIS_PATH: .github
 
 on:
   push:
