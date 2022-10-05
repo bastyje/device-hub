@@ -1,25 +1,25 @@
 name: Flyway CI
 
-env:
-  POSTGRES_DB: device-hub
-  POSTGRES_USER: application
-  POSTGRES_PASSWORD: password
-  DATABASE_PATH: database
-  THIS_PATH: '.github'
+# env:
+#   POSTGRES_DB: device-hub
+#   POSTGRES_USER: application
+#   POSTGRES_PASSWORD: password
+#   DATABASE_PATH: database
+#   THIS_PATH: '.github'
 
 on:
   push:
     branches:
       - main
-    paths:
-      - ${{env.DATABASE_PATH}}
+    # paths:
+    #   - ${{env.DATABASE_PATH}}
   pull_request:
-    paths:
-      - ${{env.DATABASE_PATH}}
-      - ${{env.THIS_PATH}}
+    # paths:
+    #   - ${{env.DATABASE_PATH}}
+    #   - ${{env.THIS_PATH}}
 
 jobs:
-  migrate:
+  build:
     name: Migrate Database
     runs-on: ubuntu-latest
     steps:
