@@ -2,12 +2,17 @@ name: Angular CI
 
 env:
   NODE_VERSION: '16.17.1'
+  PATHS: angular
 
 on:
   push:
     branches:
       - main
-  pull_request: {}
+    paths:
+      - ${{env.PATHS}}
+  pull_request:
+    paths:
+      - ${{env.PATHS}}
 
 jobs:
   build:

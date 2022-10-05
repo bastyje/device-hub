@@ -1,0 +1,32 @@
+name: Flyway CI
+
+env:
+  POSTGRES_DB: device-hub
+  POSTGRES_USER: application
+  POSTGRES_PASSWORD: password
+  PATHS: database
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ${{env.PATHS}}
+
+  pull_request:
+    paths:
+      - ${{env.PATHS}}
+
+jobs:
+  migrate:
+    name: Migrate Database
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Create image
+        run: apt install docker
+      - name: Create docker image
+        run: docker build database -t flyway -f docker/flyway/Dockerfile
+      - name: Run flyway
+        run: ./flyway

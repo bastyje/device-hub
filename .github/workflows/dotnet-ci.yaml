@@ -4,12 +4,17 @@ env:
   DOTNET_VERSION: '6.0.401'
   PATH_TO_API_PROJECT: 'net/DeviceHub.API/DeviceHub.API.csproj'
   PATH_TO_SLN_FILE: 'net'
+  PATHS: net
 
 on:
   push:
     branches:
       - main
-  pull_request: {}
+    paths: 
+      - ${{env.PATHS}}
+  pull_request:
+    paths: 
+      - ${{env.PATHS}}
 
 jobs:
   build:
