@@ -1,22 +1,23 @@
 name: Flyway CI
 
-# env:
-#   POSTGRES_DB: device-hub
-#   POSTGRES_USER: application
-#   POSTGRES_PASSWORD: password
-#   DATABASE_PATH: database
-#   THIS_PATH: '.github'
+env:
+  POSTGRES_DB: device-hub
+  POSTGRES_USER: application
+  POSTGRES_PASSWORD: password
+  DATABASE_PATH: database
+  THIS_PATH: '.github'
 
 on:
   push:
     branches:
       - main
-    # paths:
-    #   - ${{env.DATABASE_PATH}}
+    paths:
+      - ${{env.DATABASE_PATH}}
+      - ${{env.THIS_PATH}}
   pull_request:
-    # paths:
-    #   - ${{env.DATABASE_PATH}}
-    #   - ${{env.THIS_PATH}}
+    paths:
+      - ${{env.DATABASE_PATH}}
+      - ${{env.THIS_PATH}}
 
 jobs:
   build:
@@ -25,8 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Create image
-        run: apt install docker
+      - name: Install docker
+        run: sudo apt install docker
       - name: Create docker image
         run: docker build database -t flyway -f docker/flyway/Dockerfile
       - name: Run flyway
