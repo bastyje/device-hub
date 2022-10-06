@@ -30,6 +30,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install docker -y
+          ls /bin | grep docker
       - name: Create docker image
         run: docker build database -t flyway -f docker/flyway/Dockerfile
       - name: Run flyway
