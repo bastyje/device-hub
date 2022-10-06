@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  flyway:
+    image: flyway
+    command: -configFiles="/database/flyway/conf/flyway.properties" -user=application -password=pass repair migrate
+    volumes:
+      - .:/database
+    links:
+      - db:database
+  db:
+    image: postgres
+    volumes: 
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+    ports:
+      - 5434:5432
+volumes:
+  db:
+    driver: local
