@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker run --rm --network="host" -v $HOME/projects/chamber/database:/database flyway -configFiles="/database/flyway/ci/conf/flyway.properties" -user=application -password=pass repair migrate
