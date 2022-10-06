@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Update packages
-        uses: sudo apt update
+        run: sudo apt update
       - name: Install docker
         run: sudo apt install docker
       - name: Create docker image
